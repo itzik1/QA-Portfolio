@@ -1,0 +1,41 @@
+Actual Result:
+
+API returns 500 Internal Server Error.
+
+Impact:
+
+Invalid input from client crashes the server instead of being handled gracefully.
+---
+
+## 4️ Project 3 – SQL Validation → `Project3-SQL/README.md`
+
+```markdown
+# Project 3 – SQL Data Validation
+
+## Description
+This project focuses on validating data integrity in the database using SQL queries.  
+The database contains at least two tables: `users` and `payments`.  
+The goal is to detect invalid data, negative amounts, and inconsistent relations.
+
+## Tables (Conceptual)
+- `users(id, name, email, created_at, ...)`  
+- `payments(id, user_id, amount, date, ...)`
+
+## Validation Queries (Examples)
+The queries used in this project are stored in `queries.sql`.
+
+### Checks Performed
+1. Invalid email formats in `users` table  
+2. Negative payment amounts in `payments` table  
+3. Users without any payments (potential business edge cases)
+
+## Example Findings
+- 0 users with invalid email format.  
+- 1 payment with a negative amount (requires correction).  
+- 3 users without any payments – may be valid depending on business logic, but documented as part of the analysis.
+
+## Conclusion
+This project demonstrates the ability to:
+- Write SQL queries for validation  
+- Identify anomalies in production-like data  
+- Support QA and product decisions using database-level checks
