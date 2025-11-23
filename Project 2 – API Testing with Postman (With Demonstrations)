@@ -1,0 +1,36 @@
+# Project 2 - API Testing with Postman
+
+## Description
+This project focuses on testing REST API endpoints for a simple payments service using Postman.  
+The goal is to validate correct responses, error handling, and data structure.
+
+## Endpoints Tested
+- `GET /payments` -Get list of payments  
+- `POST /create-payment` - Create a new payment
+
+## Test Scenarios (Examples)
+
+### 1. GET /payments - Successful Response
+
+**Request:**  
+- Method: GET  
+- URL: /payments  
+
+**Expected Result:**
+- Status code: 200 OK  
+- Response body: JSON array of payment objects  
+- Each payment contains at least: `id`, `amount`, `date`
+
+---
+
+### 2. POST /create-payment – Valid Request
+
+**Request:**  
+- Method: POST  
+- URL: /create-payment  
+- Body (JSON):
+```json
+{
+  "amount": 120,
+  "currency": "USD"
+}
