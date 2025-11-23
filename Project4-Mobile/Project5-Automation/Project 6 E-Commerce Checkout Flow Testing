@@ -1,0 +1,50 @@
+# Project 6 – E-Commerce Checkout Flow Testing
+
+## Description
+Manual testing of an e-commerce checkout flow including product selection, cart validation, shipping calculation, payment method testing, and order confirmation.
+
+## Scope
+- Add to Cart functionality
+- Updating quantities
+- Removing items
+- Coupon validation
+- Shipping cost calculation
+- Payment method flow (Credit Card / PayPal)
+- Order confirmation screen
+
+## Test Cases (Examples)
+
+### TC01 – Add Product to Cart
+Steps:  
+1. Open product page  
+2. Click "Add to Cart"  
+Expected:  
+- Cart displays product with correct name, price, and quantity=1
+
+### TC02 – Update Item Quantity
+Steps:  
+1. Add product  
+2. Change quantity to 3  
+Expected:  
+- Total price updates correctly (price * 3)
+
+### TC03 – Invalid Coupon Code
+Steps:  
+1. Enter coupon "ABC1234"  
+Expected:  
+- Error: "Coupon not valid"
+
+### TC04 – Payment With Credit Card
+Steps:  
+1. Fill valid credit card  
+2. Submit  
+Expected:  
+- Payment approved → redirected to Thank You page
+
+## Sample Bug Report
+
+**Bug ID:** EC_CHECKOUT_009  
+**Title:** Incorrect total price when quantity > 1  
+**Severity:** High  
+**Expected:** Total should be price * quantity  
+**Actual:** Total stays the same regardless of quantity  
